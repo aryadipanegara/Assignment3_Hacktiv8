@@ -108,6 +108,7 @@ class Skills extends Component {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.1 }}
                   className="item-tech flex cursor-pointer items-center gap-2 rounded border border-blue-500 px-2 py-2 hover:bg-blue-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
                 >
                   <div className="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">

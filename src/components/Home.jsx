@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroImage from "../assets/HeroImage.png";
 import { FaHtml5, FaCss3, FaJsSquare, FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  const [iconVisible, setIconVisible] = useState([false, false, false, false]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIconVisible((prev) => {
+        const next = [...prev];
+        const firstHiddenIndex = next.findIndex((isVisible) => !isVisible);
+        if (firstHiddenIndex !== -1) {
+          next[firstHiddenIndex] = true;
+        } else {
+          next.fill(false);
+        }
+        return next;
+      });
+    }, 1000); // Adjust the interval duration (milliseconds) as needed
+
+    return () => clearInterval(interval);
+  }, []);
+
   const heroImageAnimation = {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: 1, scale: 1, transition: { duration: 1 } },
@@ -20,8 +39,8 @@ const Home = () => {
   };
 
   const iconAnimation = {
-    initial: { opacity: 0, x: 20 },
-    animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.4 } },
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
   return (
@@ -42,7 +61,7 @@ const Home = () => {
           </motion.div>
           <div className="text-center md:text-left relative">
             <motion.h1
-              className="text-5xl font-extrabold mb-4 text-blue-500" // Ubah warna teks judul
+              className="text-5xl font-extrabold mb-4 text-blue-500"
               variants={titleAnimation}
               initial="initial"
               animate="animate"
@@ -63,30 +82,30 @@ const Home = () => {
               <motion.div
                 variants={iconAnimation}
                 initial="initial"
-                animate="animate"
+                animate={iconVisible[0] ? "animate" : "initial"}
               >
-                <FaHtml5 className="text-3xl text-orange-500" />
+                <FaHtml5 className="text-5xl text-orange-500" />
               </motion.div>
               <motion.div
                 variants={iconAnimation}
                 initial="initial"
-                animate="animate"
+                animate={iconVisible[1] ? "animate" : "initial"}
               >
-                <FaCss3 className="text-3xl text-blue-500" />
+                <FaCss3 className="text-5xl text-blue-500" />
               </motion.div>
               <motion.div
                 variants={iconAnimation}
                 initial="initial"
-                animate="animate"
+                animate={iconVisible[2] ? "animate" : "initial"}
               >
-                <FaJsSquare className="text-3xl text-yellow-500" />
+                <FaJsSquare className="text-5xl text-yellow-500" />
               </motion.div>
               <motion.div
                 variants={iconAnimation}
                 initial="initial"
-                animate="animate"
+                animate={iconVisible[3] ? "animate" : "initial"}
               >
-                <FaReact className="text-3xl text-blue-300" />
+                <FaReact className="text-5xl text-blue-300" />
               </motion.div>
             </div>
           </div>
