@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { FaCamera, FaHiking, FaSwimmer } from "react-icons/fa";
 
 const interests = [
-  { name: "Fotografer", icon: <FaCamera className="text-5xl" /> },
-  { name: "Mendaki", icon: <FaHiking className="text-5xl" /> },
-  { name: "Renang", icon: <FaSwimmer className="text-5xl" /> },
+  { name: "Fotografer", icon: <FaCamera className="text-5xl text-blue-500" /> },
+  { name: "Mendaki", icon: <FaHiking className="text-5xl text-green-500" /> },
+  { name: "Renang", icon: <FaSwimmer className="text-5xl text-blue-300" /> },
 ];
 
 const Interest = () => {
@@ -28,10 +28,12 @@ const Interest = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-4 rounded-lg shadow-lg text-center"
+                className="bg-opacity-50 p-6 rounded-lg shadow-lg border border-blue-500 text-center"
               >
                 {interest.icon}
-                <p className="mt-4 text-lg font-semibold">{interest.name}</p>
+                <p className="mt-4 text-lg font-semibold text-white">
+                  {interest.name}
+                </p>
               </motion.div>
             ))}
           </motion.div>

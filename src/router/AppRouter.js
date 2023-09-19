@@ -7,7 +7,7 @@ import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Interest from "../components/Interest";
 import Awards from "../components/Awards";
-import Footer from "../components/Footer"; // Import komponen Footer
+import Footer from "../components/Footer";
 
 function AppRouter() {
   return (

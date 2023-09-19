@@ -7,7 +7,6 @@ const experiences = [
     position: "[Jabatan]",
     description: "[Deskripsi Pengalaman]",
   },
-  // Tambahkan data pengalaman lainnya di sini
 ];
 
 const Experience = () => {
@@ -27,12 +26,12 @@ const Experience = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-white rounded-lg shadow-lg p-6 mb-4"
+            className="bg-opacity-50 rounded-lg shadow-lg p-6 mb-4 border border-blue-500"
           >
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold text-white">
               {experience.company} - {experience.position}
             </h2>
-            <p className="text-gray-600 mt-2">{experience.description}</p>
+            <p className="text-gray-300 mt-2">{experience.description}</p>
           </motion.div>
         ))}
       </div>
