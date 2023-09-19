@@ -14,7 +14,7 @@ function AppRouter() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Experience" element={<Experience />} />
         <Route path="/Skills" element={<Skills />} />
