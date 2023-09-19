@@ -24,7 +24,7 @@ const About = () => {
             animate="animate"
           >
             About Me
-            <div className="h-1 w-44 bg-blue-500 absolute left-1/2 transform -translate-x-1/2 rounded" />
+            {/* <div className="h-1 w-44 bg-blue-500 absolute left-1/2 transform -translate-x-1/2 rounded" /> */}
           </motion.h1>
           <motion.div
             variants={containerAnimation}

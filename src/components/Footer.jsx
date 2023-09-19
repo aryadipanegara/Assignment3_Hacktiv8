@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex space-x-4 mb-4">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/muhammad-arya-dipanegara-gunawan-a75886261/"
             className="text-2xl hover:text-blue-500 transition duration-300"
           >
             <FaLinkedin />
           </a>
           <a
-            href="#"
+            href="https://github.com/AryaGunawann"
             className="text-2xl hover:text-blue-500 transition duration-300"
           >
             <FaGithub />
