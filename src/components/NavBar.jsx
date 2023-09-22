@@ -60,14 +60,13 @@ class NavBar extends Component {
       },
     ];
 
-    // Define the variants for the staggered animation
     const variants = {
       hidden: { opacity: 0, y: -10 },
-      visible: { opacity: 1, y: 0, transition: { delay: 0.2 } }, // Adjust the delay as needed
+      visible: { opacity: 1, y: 0, transition: { delay: 0.2 } },
     };
 
     return (
-      <>
+      <div>
         <AnimatePresence>
           {this.state.pageLoaded && (
             <motion.div
@@ -147,7 +146,7 @@ class NavBar extends Component {
             </motion.div>
           )}
         </AnimatePresence>
-      </>
+      </div>
     );
   }
 }
