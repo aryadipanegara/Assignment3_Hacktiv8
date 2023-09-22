@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 class Footer extends Component {
   render() {
     return (
-      <footer className="bg-gray-800 text-white py-8 fixed bottom-0 w-full">
+      <footer className="bg-gray-800 text-white py-8 fixed bottom-0 w-full z-50">
         <div className="container mx-auto flex flex-col items-center">
           <div className="flex space-x-4 mb-4">
             <a

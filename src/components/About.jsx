@@ -15,7 +15,7 @@ class About extends Component {
     };
 
     return (
-      <div className="bg-gradient-to-b from-black to-gray-800 min-h-screen">
+      <div className="bg-gradient-to-b from-black to-gray-800 min-h-screen pb-96">
         <div style={{ position: "relative", zIndex: 1, top: 100 }}>
           <div className="container mx-auto p-4">
             <motion.h1
