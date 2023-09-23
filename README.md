@@ -1,11 +1,7 @@
 ```markdown
-# Nama Proyek Anda
+# Portfolio website
 
 Tugas ke 3 dari Hacktiv8 - Portfolio
-
-## Demo
-
-belum ada
 
 ## Teknologi yang Digunakan
 
